@@ -12,8 +12,8 @@
 .searchBox {
   flex: 1;
   max-width: 380px;
-  background-color: #ffffff !important;
-  border: 1px solid #efe5e8 !important;
+  background-color: #fff3f3 !important;
+  border: 1px solid #cdcdcd !important;
   height: 36px;
   border-radius: 8px !important;
   display: flex;
@@ -75,7 +75,7 @@
   width: 34px !important;
   height: 34px !important;
   border-radius: 50% !important; /* Força ser um círculo perfeito */
-  border: 1px solid #efe5e8 !important; /* Bordinha cinza sutil */
+  border: 1px solid #4d0017 !important; /* Bordinha cinza sutil */
   background-color: #ffffff !important; /* FORÇA FUNDO BRANCO COMPLETO */
   color: #210612 !important; /* Ícones internos em cor escura */
   cursor: pointer !important;

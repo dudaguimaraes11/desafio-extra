@@ -134,31 +134,54 @@
   box-sizing: border-box;
 }
 
+/* --- CORREÇÃO E LIMPEZA DO ÍCONE DE CORAÇÃO (Favoritar) --- */
+
+/* 1. Estilo Base do Botão (Ícone "solto", sem borda ou fundo padrão) */
+.footer button:first-child {
+  background: transparent; /* Fundo transparente por padrão */
+  border: none; /* Remove bordas */
+  color: #513943; /* Cor neutra suave para o ícone apagado */
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  /* Garante o tamanho e centralização */
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 2. Efeito Hover (Ao passar o mouse, ganha um fundo redondo rosa suave) */
 /* ÍCONE DE CORAÇÃO (Primeiro botão do footer) */
 .footer button:first-child {
-  color: #513943; /* Vinho escuro/neutro suave por padrão */
+  background: transparent !important; /* Sem fundo nenhum */
+  border: none !important;             /* Sem borda nenhuma */
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  /* Cor padrão do coração (Apenas a linha vazia quando não clicado) */
+  color: #513943;
 }
 
-/* Efeito ao passar o mouse ou focar no coração */
+/* Hover simples (só para dar um brilho antes do clique) */
 .footer button:first-child:hover {
-  background-color: #fff0f3; /* Fundo rosa bem clarinho e suave */
-  color: #ea708c; /* O ícone acende no rosa chiclete do seu tema */
+  color: #ea708c;
 }
 
-/* ÍCONE DA LIXEIRA (Último botão do footer) */
-.footer button:last-child {
-  color: #b93c5a; /* Vermelho/vinho escuro idêntico ao do seu exemplo */
-  background-color: #fdf0f2; /* Já nasce com o fundo rosa/avermelhado suave por padrão */
+/* 🌟 QUANDO CLICADO: O CORAÇÃO FICA COMPLETO E COLORIDO */
+/* O seu JavaScript PRECISA adicionar a classe 'favoritado' no botão ao clicar */
+.footer button:first-child.favoritado {
+  color: #ea708c !important; /* Pinta a borda de rosa */
 }
 
-/* Efeito ao passar o mouse ou focar na lixeira */
-.footer button:last-child:hover {
-  background-color: #fbcad3; /* Fundo ganha um tom de rosa um pouquinho mais escuro */
-  color: #962541; /* Ícone ganha um tom vinho mais forte */
-  transform: scale(1.05); /* Leve feedback de clique */
+.footer button:first-child.favoritado svg {
+  fill: #510013 !important;  /* Pinta o MIOLO/INTERIOR do coração de rosa */
 }
 
-/* Garante o tamanho certo dos ícones internos */
+/* Garante o tamanho certo do ícone */
 .footer button svg {
   width: 16px;
   height: 16px;
