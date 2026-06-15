@@ -1,0 +1,85 @@
+.container {
+  background: white;
+  border-radius: 16px; /* Ajustado para casar com o padrão dos seus cards */
+  padding: 20px;
+  border: 1px solid #efe5e8;
+  box-shadow: 0 4px 12px rgba(66, 13, 25, 0.03);
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.container h2 {
+  color: #210612;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+}
+
+/* Alinha o gráfico de rosca de um lado e as legendas do outro */
+.contentWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+}
+
+/* O Círculo do gráfico */
+.donutChart {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* O furo interno que transforma o círculo em uma rosca (donut) */
+.donutHole {
+  width: 65px;
+  height: 65px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+}
+
+/* Caixa das legendas */
+.legendContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+/* Linha da legenda compacta e sem quebras */
+.legendRow {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 0.78rem;
+}
+
+/* A bolinha colorida indicando a cor da nota */
+.bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+/* Texto da nota (Ex: "5 estrelas") */
+.label {
+  color: #74656b;
+  flex: 1;
+}
+
+/* Porcentagem empurrada para a ponta direita */
+.percentage {
+  color: #210612;
+  font-weight: 700;
+  text-align: right;
+  margin-left: 8px;
+}

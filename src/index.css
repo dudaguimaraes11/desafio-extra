@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-sidebar: #2F020C;
+  --bg-sidebar-hover: #420D19;
+  --brand-primary: #741E31;
+  --brand-light: #F6BAD6;
+  --bg-main: #FAFAFA;
+  --bg-card: #FFFFFF;
+  --text-main: #1C1917;
+  --text-muted: #6B7280;
+  --border-light: #F3F4F6;
+  --radius-apple: 14px;
+  --shadow-premium: 0 4px 20px -2px rgba(47, 2, 12, 0.04), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  overflow: hidden; /* Mantém a tela sem scroll global */
+  height: 100vh;
+}
+
+/* Custom Scrollbar para as listas internas */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #E5E7EB;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-light);
+}

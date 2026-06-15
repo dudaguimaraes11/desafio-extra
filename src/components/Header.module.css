@@ -1,0 +1,109 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  gap: 12px;
+}
+
+/* ---------- BARRA DE BUSCA ---------- */
+.searchBox {
+  flex: 1;
+  max-width: 380px;
+  background-color: #ffffff !important;
+  border: 1px solid #efe5e8 !important;
+  height: 36px;
+  border-radius: 8px !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+.searchIcon {
+  color: #8e7e83 !important;
+}
+
+.searchBox input {
+  flex: 1;
+  border: none !important;
+  outline: none !important;
+  font-size: 0.82rem;
+  color: #210612 !important;
+  background: transparent !important;
+  width: 100%;
+}
+
+.searchBox input::placeholder {
+  color: #a39599 !important;
+}
+
+/* ---------- BLOCO DE AÇÕES ---------- */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* BOTÃO + NOVA AVALIAÇÃO (FORÇANDO O ROSA LISO) */
+.newButton {
+  all: unset !important; /* DESTRÓI QUALQUER ESTILO GLOBAL MARROM */
+  box-sizing: border-box !important;
+  border: none !important;
+  border-radius: 16px !important;
+  padding: 0 12px !important;
+  height: 34px !important;
+  background-color: #520019 !important; /* Rosa original sutil */
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 0.8rem !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+}
+
+/* BOTÕES REDONDOS (FORÇANDO O BRANCO E O FORMATO CIRCULAR) */
+.iconButton {
+  all: unset !important; /* DESTRÓI O FORMATO MARROM COMPRIDO GLOBAL */
+  box-sizing: border-box !important;
+  width: 34px !important;
+  height: 34px !important;
+  border-radius: 50% !important; /* Força ser um círculo perfeito */
+  border: 1px solid #efe5e8 !important; /* Bordinha cinza sutil */
+  background-color: #ffffff !important; /* FORÇA FUNDO BRANCO COMPLETO */
+  color: #210612 !important; /* Ícones internos em cor escura */
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+}
+
+.iconButton:hover {
+  background-color: #fdfafb !important;
+}
+
+/* MINI NOTIFICAÇÃO ROSA */
+.badge {
+  position: absolute !important;
+  top: -2px !important;
+  right: -2px !important;
+  background-color: #450015 !important;
+  color: #ffffff !important;
+  font-size: 0.58rem !important;
+  font-weight: 700 !important;
+  width: 13px !important;
+  height: 13px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 1.5px solid #ffffff !important;
+  z-index: 10 !important;
+}

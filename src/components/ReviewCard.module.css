@@ -1,0 +1,165 @@
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #efe5e8;
+  box-shadow: 0 4px 12px rgba(66, 13, 25, 0.02);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+.posterContainer {
+  overflow: hidden;
+  width: 100%;
+  height: 125px !important; /* Altura vertical ideal e equilibrada */
+  background-color: #f5f5f5;
+  flex-shrink: 0;
+}
+
+.poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.content {
+  padding: 10px !important;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between; /* Empurra o footer com os botões para a base */
+}
+
+.date {
+  color: #a08f96;
+  font-size: 0.65rem;
+  margin: 0;
+}
+
+.content h3 {
+  color: #210612;
+  font-size: 0.82rem !important;
+  font-weight: 700;
+  margin: 2px 0 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.stars {
+  margin: 2px 0;
+  font-size: 0.68rem;
+}
+
+.content p {
+  color: #74656b;
+  font-size: 0.7rem !important;
+  line-height: 1.3;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Mostra até 3 linhas de texto sem amassar */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---------- BASE DO CARD (ONDE FICAM OS BOTÕES) ---------- */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid #efe5e8; /* Divisória sutil ajustada para o padrão do app */
+}
+
+/* Estilo base idêntico para as duas caixinhas dos botões */
+.actionBtn {
+  background: #ffffff;
+  border: 1px solid #efe5e8;
+  border-radius: 6px; /* Cantos arredondados fofos combinando com os inputs */
+  width: 26px; /* Tamanho delicado para encaixar nos cards pequenos */
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- BOTÃO DE CORAÇÃO (FAVORITAR) --- */
+.likeBtn {
+  color: #a08f96; /* Cinza arroxeado discreto por padrão */
+}
+
+.likeBtn:hover {
+  background: #fff0f3; /* Fundo rosa bem clarinho */
+  border-color: #fcdce5;
+  color: #ea708c; /* Coração ganha o rosa do botão principal */
+  transform: scale(1.05);
+}
+
+/* --- BOTÃO DA LIXEIRA (EXCLUIR) --- */
+.deleteBtn {
+  color: #a08f96; /* Mesma cor neutra por padrão */
+}
+
+.deleteBtn:hover {
+  background: #fdf2f4; /* Fundo vermelho suave de aviso */
+  border-color: #f7d6dc;
+  color: #dc3545; /* Vermelho padrão de deletar */
+  transform: scale(1.05);
+}
+
+/* ---------- ESTILIZAÇÃO DOS BOTÕES (IDÊNTICO À IMAGEM) ---------- */
+
+.footer button {
+  background: transparent; /* Remove o fundo branco padrão */
+  border: none; /* Sumir com as bordas cinzas e linhas de uma vez por todas */
+  border-radius: 10px; /* Bordas arredondadas e suaves */
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ÍCONE DE CORAÇÃO (Primeiro botão do footer) */
+.footer button:first-child {
+  color: #513943; /* Vinho escuro/neutro suave por padrão */
+}
+
+/* Efeito ao passar o mouse ou focar no coração */
+.footer button:first-child:hover {
+  background-color: #fff0f3; /* Fundo rosa bem clarinho e suave */
+  color: #ea708c; /* O ícone acende no rosa chiclete do seu tema */
+}
+
+/* ÍCONE DA LIXEIRA (Último botão do footer) */
+.footer button:last-child {
+  color: #b93c5a; /* Vermelho/vinho escuro idêntico ao do seu exemplo */
+  background-color: #fdf0f2; /* Já nasce com o fundo rosa/avermelhado suave por padrão */
+}
+
+/* Efeito ao passar o mouse ou focar na lixeira */
+.footer button:last-child:hover {
+  background-color: #fbcad3; /* Fundo ganha um tom de rosa um pouquinho mais escuro */
+  color: #962541; /* Ícone ganha um tom vinho mais forte */
+  transform: scale(1.05); /* Leve feedback de clique */
+}
+
+/* Garante o tamanho certo dos ícones internos */
+.footer button svg {
+  width: 16px;
+  height: 16px;
+}

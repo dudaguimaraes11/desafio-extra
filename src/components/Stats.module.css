@@ -1,0 +1,67 @@
+/* Container que alinha os 4 em linha horizontal perfeita */
+.statsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 12px !important;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* O segredo: Fixar a altura em 62px para sumir com o scroll */
+.statCard {
+  background: white;
+  border-radius: 12px;
+  padding: 6px 12px !important;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #efe5e8;
+  height: 62px !important; /* Altura micro travada */
+  box-sizing: border-box;
+}
+
+/* Círculo do ícone menor e delicado */
+.statIcon {
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 50% !important; /* Totalmente redondo igual à imagem */
+  background: #fff3f6;
+  color: #741E31;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Organização dos textos internos em coluna */
+.statInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.1;
+}
+
+/* Label de cima (ex: "Avaliações") */
+.statInfo label {
+  font-size: 0.68rem !important;
+  color: #8e7e83;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Número grande (ex: "24") */
+.statInfo span {
+  font-size: 1.1rem !important;
+  font-weight: 700;
+  color: #210612;
+  margin: 1px 0;
+}
+
+/* Texto descritivo miúdo debaixo do número */
+.statInfo small {
+  font-size: 0.6rem !important;
+  color: #a08f96;
+  white-space: nowrap;
+}

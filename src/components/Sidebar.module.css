@@ -1,0 +1,190 @@
+.sidebar {
+  /* Reduzido ao extremo: 180px */
+  width: 180px;
+  min-width: 180px;
+  max-width: 180px;
+  
+  /* 🌟 AS DUAS MUDANÇAS AQUI PARA ACOMPANHAR A ROLAGEM: */
+  min-height: 100vh; /* Ocupa no mínimo a tela inteira */
+  height: auto;      /* Permite crescer infinitamente se o conteúdo do meio empurrar a página */
+  
+  background-color: #210612;
+  padding: 16px 8px; /* Margens internas mínimas */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* ---------- BRAND (LOGO E TÍTULO) ---------- */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 20px;
+  padding-left: 6px;
+}
+
+.logoBox {
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.05rem; /* Ajustado para caber em 180px */
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* Esconde o slogan para não entupir a largura */
+.brand span {
+  display: none !important;
+}
+
+/* ---------- MENU DE NAVEGAÇÃO ---------- */
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.75) !important;
+  background: transparent !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px; /* Bem compacto */
+  border-radius: 8px;
+  font-size: 0.8rem; /* Fonte menor para dar leitura livre */
+  font-weight: 500;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav a:hover {
+  background: rgba(255, 255, 255, 0.04) !important;
+  color: #ffffff !important;
+}
+
+.nav a.active {
+  background-color: #ff6f9c !important;
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+/* ---------- CONTAINER DO RODAPÉ ---------- */
+.bottomSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+}
+
+/* ---------- CARD DA PIPOCA (MINIMALISTA) ---------- */
+.promo {
+  background-color: #fff4f6;
+  border-radius: 12px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.promoContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+}
+
+.popcorn {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.promoText h3 {
+  margin: 0;
+  color: #210612;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+/* Remove o texto longo da promoção para salvar o espaço vertical/horizontal */
+.promoText p {
+  display: none !important;
+}
+
+.promo button {
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  padding: 6px;
+  background-color: #ff6f9c;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+/* ---------- PERFIL DO USUÁRIO ---------- */
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 8px;
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.profileData {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.profileData img {
+  width: 24px; /* Mini foto */
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profileData h4 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 80px; /* Não deixa o nome empurrar a seta */
+}
+
+/* Esconde o "Membro desde" para focar apenas no nick */
+.profileData span {
+  display: none !important;
+}
+
+.profile svg {
+  color: rgba(255, 255, 255, 0.4);
+  flex-shrink: 0;
+}
+
+@media(max-width: 1200px) {
+  .sidebar {
+    display: none;
+  }
+}

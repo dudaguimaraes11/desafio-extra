@@ -1,0 +1,99 @@
+.hero {
+  background: linear-gradient(
+    135deg,
+    #1f020a 0%,
+    #2a0410 40%,
+    #420d19 100%
+  );
+  /* Altura extremamente controlada para forçar tudo a caber em uma tela cheia */
+  height: 170px; 
+  min-height: 170px;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32px;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.content {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content h1 {
+  color: #ffffff;
+  font-size: 1.6rem; /* Fonte compacta para não empurrar os cards de baixo */
+  line-height: 1.1;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.5px;
+}
+
+.content h1 span {
+  color: #ffbdd7; /* Rosa do destaque */
+}
+
+.content p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.78rem; /* Texto pequeno e curto */
+  line-height: 1.3;
+  margin: 0 0 12px 0;
+}
+
+.actions {
+  display: flex;
+}
+
+/* BOTÃO AVALIAR AGORA ➔ */
+.primaryBtn {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 0 16px;
+  height: 30px; /* Botão baixinho */
+  border-radius: 8px;
+  background: #ffbdd7;
+  color: #420000;
+  font-weight: 600;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s ease;
+}
+
+.primaryBtn:hover {
+  background: #c24d6f;
+}
+
+/* ---------- CONTAINER DA CLAQUETE ---------- */
+.visualContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 1;
+}
+
+.claqueteImg {
+  height: 140px; /* Reduzido para encaixar na altura de 170px do hero */
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.5));
+  opacity: 0.85;
+  /* Inclinação sutil combinando com estética de cinema */
+  transform: rotate(-5deg); 
+}
+
+/* RESPONSIVIDADE COMPACTA */
+@media(max-width: 900px) {
+  .claqueteImg {
+    display: none; /* Some com a imagem em telas muito compactas para salvar espaço */
+  }
+}
